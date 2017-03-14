@@ -13,7 +13,7 @@ import (
 )
 
 
-func init() {
+func main() {
 	http.HandleFunc("/", digits)
 	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
 	fmt.Printf("Escucha en %s...", bind)
