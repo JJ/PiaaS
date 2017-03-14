@@ -9,7 +9,9 @@ import (
 //	"runtime"
 	"github.com/JJ/pigo"
 	"strconv"
+	 "encoding/json"
 )
+
 
 func main() {
 	http.HandleFunc("/", digits)
@@ -22,6 +24,20 @@ func main() {
 }
 
 func digits(res http.ResponseWriter, req *http.Request) {
+	type PiDigits struct {
+		Digits     int64
+		Pi         string
+	}
 	digits, _ := strconv.ParseInt(req.URL.Query().Get("digits"), 10, 64)
-	fmt.Fprintf(res, "%d dígitos de Pi: %s", digits, pigo.Pi(digits))
+	this_pi := PiDigits{
+		Digits: digits,
+		Pi: pigo.Pi(digits),
+	}
+	js, err := json.Marshal( this_pi )
+	if ( err != nil ) {
+		fmt.Fprintf( res, "Error %s", err )
+	} else {
+		res.Header().Set("Content-Type", "application/json")
+		res.Write(js)
+	}
 }
