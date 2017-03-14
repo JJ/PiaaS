@@ -15,7 +15,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", digits)
-	bind := fmt.Sprintf("%s:%s", os.Getenv("OPENSHIFT_GO_IP"), os.Getenv("OPENSHIFT_GO_PORT"))
+	bind := fmt.Sprintf(":%s", os.Getenv("PORT"))
 	fmt.Printf("Escucha en %s...", bind)
 	err := http.ListenAndServe(bind, nil)
 	if err != nil {
