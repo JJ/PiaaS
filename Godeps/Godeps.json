@@ -1,13 +1,14 @@
 {
-    "ImportPath": "github.com/JJ/PiaaS",
-    "GoVersion": "go1.6",
-    "Packages": [
-        "./..."
-    ],
-    "Deps": [
-        {
-            "ImportPath": "github.com/JJ/pigo",
-            "Comment": "Great stuff"
-        }
-        ]
+	"ImportPath": "github.com/JJ/PiaaS",
+	"GoVersion": "go1.6",
+	"GodepVersion": "v79",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/JJ/pigo",
+			"Rev": "efb9838067fd4b1da6a8ea5fe1cfe312cbf51547"
+		}
+	]
 }
