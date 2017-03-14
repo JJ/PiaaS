@@ -1,1 +1,1 @@
-web: go run pi-digits.go
+web: PiaaS
