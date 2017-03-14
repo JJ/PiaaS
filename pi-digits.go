@@ -1,12 +1,9 @@
 package main
-// Taken from https://play.golang.org/p/mb5eoZpnYN
-// No license specified
 
 import (
 	"fmt"
 	"net/http"
 	"os"
-//	"runtime"
 	"github.com/JJ/pigo"
 	"strconv"
 	 "encoding/json"
