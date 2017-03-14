@@ -7,7 +7,7 @@
     "Deps": [
         {
             "ImportPath": "github.com/JJ/pigo",
-            "Comment": "Great stuff",
+            "Comment": "Great stuff"
         }
         ]
 }
